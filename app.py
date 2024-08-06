@@ -43,13 +43,13 @@ app.layout = html.Div(style={
         "textAlign": "center",
         "fontFamily": "Cursive"
     }, children=[
-    html.H1(children="SoulFood pink morsel data visualisation"),
+    html.H1(children="SoulFood pink morsel data visualisation", id="header"),
     html.Div(children="Sales before and Sales after price change"),
     dcc.Graph(
-        id="Pink Morsel Sales",
+        id="Pink_Morsel_Sales",
         figure=initial_line_graph
     ),
-    dcc.RadioItems(["all", "north", "south", "east", "west"], "all", id="GraphInput", inline=True, style={})
+    dcc.RadioItems(["all", "north", "south", "east", "west"], "all", id="GraphInput", inline=True)
 ])
 
 @callback(
